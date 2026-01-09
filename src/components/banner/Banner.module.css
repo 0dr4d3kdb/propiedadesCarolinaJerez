@@ -1,0 +1,19 @@
+.background{
+    background: url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FzYXN8ZW58MHx8MHx8fDA%3D');
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.titulo{
+    color: #ffffff;
+    background-color: rgba(34, 33, 33, 0.8);
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 10px;
+}
