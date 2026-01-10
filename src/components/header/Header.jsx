@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -11,34 +23,38 @@ export default function Header() {
 
       <nav className={styles.nav}>
         <Link to="/" className={styles.links}>Inicio</Link>
-        <Link to="/about" className={styles.links}>Sobre nosotros</Link>
+        <Link to="/sobre-nosotros" className={styles.links}>Sobre nosotros</Link>
 
-        {/* DROPDOWN */}
-        <div
-          className={styles.dropdown}
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
-        >
+        <div className={styles.dropdown} ref={dropdownRef}>
           <button
-            className={styles.dropdownbutton}
+            className={styles.dropdownButton}
+            onClick={() => setOpen(o => !o)}
             aria-expanded={open}
+            aria-haspopup="true"
           >
             Propiedades ▾
           </button>
 
           {open && (
-            <ul className={styles.dropdownmenu}>
+            <ul className={styles.dropdownMenu}>
               <li>
-                <Link to="/propiedades/venta">Venta</Link>
+                <Link to="/propiedades/venta" onClick={() => setOpen(false)}>
+                  Venta
+                </Link>
               </li>
               <li>
-                <Link to="/propiedades/arriendo">Arriendo</Link>
+                <Link to="/propiedades/arriendo" onClick={() => setOpen(false)}>
+                  Arriendo
+                </Link>
+              </li>
+              <li>
+                <Link to="/propiedades" onClick={() => setOpen(false)}>
+                  Todas
+                </Link>
               </li>
             </ul>
           )}
         </div>
-
-        <Link to="/projects" className={styles.links}>Servicios</Link>
         <Link to="/contact" className={styles.links}>Contacto</Link>
       </nav>
     </header>

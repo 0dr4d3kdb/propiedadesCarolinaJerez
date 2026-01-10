@@ -1,63 +1,93 @@
-.header{
-    height: 4rem;
-    background: linear-gradient(#ffffff, #c4c4c4);
-    color: #000000;
+.header {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    background: linear-gradient(#e9e8e8, #ffffff);
+    height: 4rem;
     position: fixed;
 }
 
-.logo{
+.logo {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 30%;
 }
 
-nav{
-    width: 80%;
+.nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-.links{
-    width: fit-content;
+.links {
+    display: flex;
+    justify-content: center;
+    color: #535353;
+    text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
-    color: #646464;
+    border-radius: 15px;
+    width: fit-content;
 }
 
 .links:hover{
+    background-color: #949494;
     color: #ffffff;
-    background-color: #a5a5a5;
 }
 
-.dropdown{
-    width: fit-content;
-    color: transparent;
-}
-
-.dropdownbutton{
-    background-color: transparent;
+.dropdown {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #535353;
+    text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
-    color: #646464
+    border-radius: 15px;
+    width: fit-content;
 }
 
-.dropdownbutton:hover{
+/* .dropdown:hover{
+    background-color: #949494;
     color: #ffffff;
-    background-color: #a5a5a5;
-    border-color: transparent;
+} */
+
+.dropdownButton {
+    background: none;
+    border: none;
+    color: #535353;
+    cursor: pointer;
+    width: fit-content;
 }
 
+.dropdownButton:hover{
+    background-color: #949494;
+    color: #ffffff;
+}
+
+/* 👇 CLAVE */
 .dropdownMenu {
     position: absolute;
     top: 120%;
     left: 0;
     background: #222;
     border-radius: 8px;
-    padding: 0.5rem 0;
     min-width: 180px;
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.dropdownMenu li {
+    list-style: none;
+}
+
+.dropdownMenu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdownMenu a:hover {
+    background: #333;
 }
