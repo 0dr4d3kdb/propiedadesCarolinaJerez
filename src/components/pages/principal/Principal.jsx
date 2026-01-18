@@ -4,12 +4,12 @@ import Banner from '../../organisms/banner/Banner'
 import Section1 from '../../organisms/section1/Section1'
 
 export default function Principal() {
- return (
-  <>
-  <div className={styles.main}>
-   <Banner/>
-   <Section1/>
-  </div>
-  </>
- )
+    return (
+    <>
+    <div className={styles.main}>
+    <Banner/>
+    <Section1/>
+    </div>
+    </>
+    )
 }
