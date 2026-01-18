@@ -4,21 +4,26 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Principal from './components/pages/Principal/Principal'
 import AboutUs from './components/pages/aboutUs/AboutUs'
 import Header from './components/organisms/header/Header'
+import Footer from './components/organisms/footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="app-layout">
         <Header/>
-        <Routes>
-          <Route path='/' element={<Principal/>}/>
-          <Route path='/sobre-nosotros' element={<AboutUs/>}/>
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<Principal />} />
+            <Route path="/sobre-nosotros" element={<AboutUs />} />
+          </Routes>
+        </main>
+
+        <Footer/>
+      </div>
+    </BrowserRouter>
+  );
 }
+
 
 export default App

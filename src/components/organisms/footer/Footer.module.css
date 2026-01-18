@@ -1,0 +1,35 @@
+.footer{
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.info > img {
+    height: 5.5rem;
+    width: auto;
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    row-gap: 1rem;
+    width: 30%;
+}
+
+.redes{
+    height: 30px;
+    width: auto;
+    
+}
+
+
