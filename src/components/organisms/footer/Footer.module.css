@@ -21,9 +21,10 @@
 
 .contacto{
     display: flex;
+    justify-content: center;
     align-items: center;
     row-gap: 1rem;
-    width: 30%;
+    width: 20%;
 }
 
 .redes{

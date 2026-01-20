@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./banner.module.css";
 
 const carrusel = [
-  "https://www.somos-tic.cl/wp-content/uploads/2021/01/Corretaje.jpg",
-  "https://i0.wp.com/www.socovesa.cl/blog/web/wp-content/uploads/2024/10/tips-comprar-en-verde.jpeg?resize=1400%2C700&ssl=1",
-  "https://aulavirtualacop.cl/wp-content/uploads/2024/10/handshake-real-estate-brokerage-agent-deliver-a-sa-2023-11-27-05-03-42-utc-scaled.jpg"
+  "/prop1.jpg",
+  "/prop2.jpg",
+  "/prop3.jpg",
+  "/prop4.jpg"
 ];
 
 export default function Banner() {

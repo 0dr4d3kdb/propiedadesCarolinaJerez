@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}><img className={styles.logoImg} src="/public/logo.png" alt="CJM Inmobiliaria"
+      <div className={styles.logo}><img className={styles.logoImg} src="/logo.png" alt="CJM Inmobiliaria"
       title="CJM Inmobiliaria"/></div>
 
       <nav className={styles.nav}>

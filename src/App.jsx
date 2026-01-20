@@ -5,6 +5,7 @@ import Principal from './components/pages/Principal/Principal'
 import AboutUs from './components/pages/aboutUs/AboutUs'
 import Header from './components/organisms/header/Header'
 import Footer from './components/organisms/footer/Footer'
+import Propiedades from './components/pages/propiedades/Propiedades'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Principal />} />
             <Route path="/sobre-nosotros" element={<AboutUs />} />
+            <Route path='/propiedades' element={<Propiedades/>}/>
           </Routes>
         </main>
 
